@@ -1,6 +1,6 @@
 FROM tautulli/tautulli
 
-RUN apt-get install -q -y --no-install-recommends python3-pydantic python3-openai
+RUN apt-get update && apt-get install -q -y --no-install-recommends python3-pydantic python3-openai
 RUN /usr/local/bin/python -m ensurepip --default-pip 
 RUN /usr/local/bin/python -m pip install --no-cache-dir --no-input requests openai pydantic
 
