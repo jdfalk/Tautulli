@@ -11,7 +11,7 @@ FROM tautulli/tautulli
 #     -r requirements.txt && \
 #     rm requirements.txt && \
 #     rm -rf /var/lib/apt/lists/*
-RUN /usr/local/bin/python -m pip install --no-cache-dir requests openai pydantic pydantic-core
+RUN /usr/local/bin/python -m pip install --no-cache-dir requests openai
 
 
 CMD [ "python", "Tautulli.py", "--datadir", "/config" ]
