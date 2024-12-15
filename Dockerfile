@@ -1,6 +1,7 @@
 FROM tautulli/tautulli
 
-RUN pip install --no-cache-dir --no-input requests openai pydantic
+RUN /usr/local/bin/python -m ensurepip --default-pip 
+RUN /usr/local/bin/python -m pip install --no-cache-dir --no-input requests openai pydantic
 
 CMD [ "python", "Tautulli.py", "--datadir", "/config" ]
 ENTRYPOINT [ "./start.sh" ]
