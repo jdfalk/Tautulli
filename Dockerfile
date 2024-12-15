@@ -11,7 +11,7 @@ RUN \
     -r requirements.txt && \
   rm requirements.txt && \
   rm -rf /var/lib/apt/lists/*
-RUN /usr/local/bin/python -m pip install --no-cache-dir --no-input requests openai pydantic
+RUN /usr/local/bin/python -m pip install --no-cache-dir --no-input requests openai pydantic pydantic-core
 
 
 CMD [ "python", "Tautulli.py", "--datadir", "/config" ]
